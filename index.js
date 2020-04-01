@@ -1,6 +1,6 @@
 const exec = require("@actions/exec")
 
-return exec.exec('release-it patch --preRelease=qa --ci --no-npm')
+return exec.exec('npm start')
     .then(() => {
         process.exit(0)
     })
