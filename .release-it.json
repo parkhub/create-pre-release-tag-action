@@ -1,4 +1,7 @@
 {
+  "hooks": {
+    "before:bump": "sh ./before.sh"
+  },
   "git": {
     "changelog": "git log --pretty=format:\"* %s (%h)\" ${latestTag}...HEAD",
     "requireCleanWorkingDir": false,

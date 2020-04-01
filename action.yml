@@ -2,5 +2,5 @@ name: Create Pre-Release Tag
 description: Creates a pre-release tag for the application version.
 author: Logan Fisher
 runs:
-  using: 'node12'
-  main: 'index.js'
+  using: 'docker'
+  image: 'Dockerfile'
