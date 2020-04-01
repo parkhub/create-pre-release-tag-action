@@ -8,8 +8,11 @@ echo "TOKEN: ${TOKEN}"
 echo "Configuring git"
 git config --global url."https://${USERNAME}:${TOKEN}@github.com".insteadOf "https://github.com"
 
+echo "Initialize GIT"
+git init
+
 echo "Cloning repo ${REPO}"
-git clone https://github.com/${REPO}.git
+git clone https://github.com/${REPO}.git 
 
 echo "Adding remote for repo ${REPO}"
 git remote add origin https://github.com/${REPO}.git
