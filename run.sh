@@ -9,10 +9,10 @@ echo "Configuring git"
 git config --global url."https://${USERNAME}:${TOKEN}@github.com".insteadOf "https://github.com"
 
 echo "Cloning repo ${REPO}"
-git clone https://github.com/parkhub/${REPO}.git
+git clone https://github.com/${REPO}.git
 
 echo "Adding remote for repo ${REPO}"
-git remote add origin https://github.com/parkhub/${REPO}.git
+git remote add origin https://github.com/${REPO}.git
 
 echo "Checking out QA branch"
 git checkout origin/qa
