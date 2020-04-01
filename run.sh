@@ -18,8 +18,10 @@ echo "Adding remote for repo ${REPO}"
 git remote add origin https://github.com/${REPO}.git
 
 echo "Checking out QA branch"
+git fetch
 git checkout origin/qa
+git checkout -b qa
 
 echo "Running release-it"
 # $1 is the release type major, minor or patch
-DEBUG=release-it:* release-it patch --preRelease=qa --ci --no-npm
+DEBUG=release-it:* release-it ${RELEASE_TYPE} --preRelease=qa --ci --no-npm
